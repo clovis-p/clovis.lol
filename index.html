@@ -1,68 +1,20 @@
 <!DOCTYPE html>
-<html>
 <head>
-  <title>allo</title>
-  <style>
-    body {
-      background-color: #f1f1f1;
-      font-family: 'Courier New', monospace;
-      margin: 0;
-      padding: 0;
-    }
-    
-    .container {
-      max-width: 800px;
-      margin: 0 auto;
-      padding: 20px;
-      text-align: center;
-    }
-    
-    h1 {
-      color: #333;
-    }
-    
-    .flag {
-      max-width: 150px;
-      margin-bottom: 20px;
-    }
-    
-    .project-list {
-      list-style-type: none;
-      padding: 0;
-      margin: 0;
-    }
-    
-    .project-list li {
-      margin-bottom: 10px;
-    }
-    
-    .project-list a {
-      text-decoration: underline;
-      color: #333;
-      transition: color 0.3s;
-    }
-    
-    .project-list a:hover {
-      color: #ff6600;
-      font-weight: bold;
-    }
-
-  </style>
+    <title>La page Web de Clovis</title>
+    <link rel="stylesheet" href="css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-  <div class="container">
-    <h1>La page web de Clovis</h1>
-    <ul class="project-list">
-      <li><h2>Projets:</h2></li>
-      <li><a href="https://github.com/clovis-p/blocks">blocks</a></li>
-      <li><a href="projets/blocks-emscripten">blocks-emscripten</a></li>
-      <li><a href="https://github.com/clovis-p/sdl-dungeon">sdl-dungeon</a></li>
-      <li><a href="https://github.com/clovis-p/tanks">tanks</a></li>
-      <br/>
-      <li><a href="https://github.com/clovis-p">Profil GitHub</a></li>
-    </ul>
-    <br/>
-    <img class="flag" src="images/quebec.gif" alt="quebec.gif">
-  </div>
+    <h1>La page Web de Clovis</h1>
+    <nav id="main-nav">
+        <ul id="main-ul">
+            <li class="main-li" id="li1"><a href="#" id="tanks-link">tanks</a></li>
+            <li class="main-li" id="li2"><a href="#" id="js-pong-link">js-pong</a></li>
+            <li class="main-li" id="li3"><a href="#" id="blocks-link">blocks</a></li>
+            <li class="main-li" id="li4"><a href="#" id="mandelbrot-mapper-link">mandelbrot-mapper</a></li>
+        </ul>
+    </nav>
+
+    <script type="text/javascript" src="lib/jquery/jquery-3.7.1.min.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
 </body>
-</html>
