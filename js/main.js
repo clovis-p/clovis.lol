@@ -1,5 +1,10 @@
 "use strict";
 
+const NAV_ANIMATION_LENGTH_ITEM = 900;
+const NAV_ANIMATION_DELAY = 0.1;
+
+const NAV_ITEM_COUNT = 4;
+
 function init() {
     $("h1").css("text-align", "center")
         .css("font-size", "30px");
@@ -82,16 +87,17 @@ function turnListIntoNavbar() {
 
         $(element).css("transform","translate( " + deltaX + "px, " + deltaY + "px)")
             .css("transition", "transform 0.25s")
-            .css("transition-delay", (0.1 * parseInt(id.charAt(2)) - 0.1) + "s");
+            .css("transition-delay", (NAV_ANIMATION_DELAY * parseInt(id.charAt(2)) - NAV_ANIMATION_DELAY) + "s");
     });
 
-    mainNavUlClone.css("display", "none")
-        .css("opacity", "1");
+    mainNavUlClone.css("display", "flex")
+        .css("opacity", "0");
 
     setTimeout(function () {
         $("#main-ul").remove();
-        mainNavUlClone.css("display", "flex");
-    }, 900);
+        mainNavUlClone.css("display", "flex")
+            .css("opacity", "1");
+    }, NAV_ANIMATION_LENGTH_ITEM);
 }
 
 $(document).ready(function () {
